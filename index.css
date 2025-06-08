@@ -58,6 +58,12 @@ body {
     text-decoration: none;
 }
 
+/* Estilo para el logo de Ancla */
+.logoancla {
+    margin-top: 14px;
+    width: 120px;
+}
+
 .logo i {
     margin-right: 10px;
     font-size: 28px;
@@ -124,7 +130,8 @@ body {
     font-size: 24px;
     color: var(--text-color);
     cursor: pointer;
-    display: none;
+    display: none; /* Oculto por defecto en desktop */
+    flex-shrink: 0; /* Evita que el botón se encoja */
 }
 
 /* Hero Section */
@@ -302,9 +309,7 @@ body {
 
 .feature-content {
     flex: 1;
-    /* --- INICIO DE CAMBIO --- */
-    padding-left: 100px; /* Agrega padding a la izquierda para separar el contenido */
-    /* --- FIN DE CAMBIO --- */
+    padding-left: 20px; /* Agrega padding a la izquierda para separar el contenido */
 }
 
 .feature-image {
@@ -573,19 +578,74 @@ body {
     }
 }
 
+/* Mobile & Tablet styles */
 @media (max-width: 768px) {
+    /* Ajustes para el contenedor del header */
+    .header-container {
+        padding: 0 15px; /* Ajusta el padding lateral para dejar espacio al botón */
+    }
+
     .main-nav {
-        display: none;
+        position: fixed;
+        top: 70px; /* Altura del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: var(--shadow);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 99;
+        max-height: calc(100vh - 70px); /* Asegura que no exceda la altura del viewport */
+        overflow-y: auto; /* Permite el scroll dentro del menú si el contenido es muy largo */
+    }
+
+    .main-nav.active {
+        transform: translateY(0);
+    }
+
+    .main-nav .nav-link {
+        width: 90%;
+        text-align: center;
+        padding: 12px;
+        margin: 5px 0;
     }
     
     .auth-buttons {
-        display: none;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px; /* Asegura padding para los botones de autenticación */
+        display: none; /* Controlado por JS */
+        background-color: var(--header-bg); /* Añadir color de fondo para que no sea transparente */
+        box-shadow: var(--shadow); /* Mantener la sombra */
+        z-index: 98; /* Asegurar que esté por encima de otros elementos, pero debajo de mainNav */
+    }
+    
+    .auth-buttons.active {
+        display: flex;
+    }
+    
+    .auth-buttons .login-btn,
+    .auth-buttons .register-btn {
+        width: 90%;
+        text-align: center;
     }
     
     .mobile-menu-btn {
-        display: block;
+        display: block; /* Asegura que se muestre en móvil */
+        z-index: 101; /* Asegura que esté por encima de todo en el header */
     }
-    
+
+    .mobile-menu-btn.active {
+        color: var(--primary-color);
+    }
+
     .hero-content h1 {
         font-size: 32px;
     }
@@ -622,58 +682,45 @@ body {
     }
 }
 
-/* Mobile Menu Styles */
+/* Estilos para el botón flotante de versión Beta */
+.beta-floating-btn {
+    position: fixed;
+    bottom: 25px; /* Ajusta la distancia desde abajo */
+    right: 25px; /* Ajusta la distancia desde la derecha */
+    background-color: #FFD700; /* Color amarillo */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 12px 20px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para un toque más profesional */
+}
+
+.beta-floating-btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes responsive para el botón flotante */
 @media (max-width: 768px) {
-    .main-nav {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--header-bg);
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        box-shadow: var(--shadow);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        z-index: 99;
-    }
-    
-    .main-nav.active {
-        transform: translateY(0);
-    }
-    
-    .main-nav .nav-link {
-        width: 90%;
-        text-align: center;
-        padding: 12px;
-        margin: 5px 0;
-    }
-    
-    .auth-buttons {
-        position: fixed;
-        top: 180px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 0 20px;
-        display: none;
-    }
-    
-    .auth-buttons.active {
-        display: flex;
-    }
-    
-    .auth-buttons .login-btn,
-    .auth-buttons .register-btn {
-        width: 90%;
-        text-align: center;
-    }
-    
-    .mobile-menu-btn.active {
-        color: var(--primary-color);
+    .beta-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
     }
 }
 
+@media (max-width: 480px) {
+    .beta-floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
