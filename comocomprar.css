@@ -1,0 +1,488 @@
+/* Estilos específicos para la página de "Cómo Comprar" */
+.how-to-buy-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sección Introductoria */
+.buy-intro-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.buy-intro-section h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buy-intro-section h1 i {
+    font-size: 38px;
+}
+
+.buy-intro-section .intro-text {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección de Pasos */
+.buy-steps-section {
+    margin-bottom: 40px;
+}
+
+.buy-steps-section h2,
+.future-features-section h2,
+.support-section h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buy-steps-section h2 i,
+.future-features-section h2 i,
+.support-section h2 i {
+    font-size: 32px;
+}
+
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid var(--medium-gray);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step-card h3 {
+    font-size: 22px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step-card p {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Sección de Futuras Funcionalidades */
+.future-features-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.future-features-section .future-intro {
+    font-size: 16px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.features-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.feature-item {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--medium-gray);
+    transition: transform 0.2s ease-in-out;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+}
+
+.feature-item i {
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: var(--dark-gray);
+    line-height: 1.5;
+}
+
+/* Sección de Soporte */
+.support-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.support-section p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.support-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.support-section a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.support-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex; /* Use inline-flex for centering with gap */
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+.support-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .steps-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .features-list-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    /* Adjust header navigation on tablets/smaller desktops */
+    .main-nav {
+        flex-wrap: wrap; /* Allow navigation items to wrap */
+        justify-content: center; /* Center items when they wrap */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .main-nav .nav-link {
+        padding: 8px 12px; /* Reduce padding for smaller items */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .header-container {
+        padding: 10px 15px; /* Adjust header padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .how-to-buy-content {
+        padding: 15px;
+    }
+
+    .buy-intro-section {
+        padding: 25px;
+    }
+
+    .buy-intro-section h1 {
+        font-size: 28px;
+        flex-direction: column; /* Stack icon and text */
+        gap: 10px;
+    }
+
+    .buy-intro-section h1 i {
+        font-size: 32px;
+    }
+
+    .buy-intro-section .intro-text {
+        font-size: 16px;
+    }
+
+    .buy-steps-section h2,
+    .future-features-section h2,
+    .support-section h2 {
+        font-size: 24px;
+        flex-direction: column; /* Stack icon and text */
+        gap: 8px;
+    }
+
+    .buy-steps-section h2 i,
+    .future-features-section h2 i,
+    .support-section h2 i {
+        font-size: 28px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr; /* Single column layout for steps */
+        gap: 20px;
+    }
+
+    .step-card {
+        padding: 20px;
+    }
+
+    .step-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .step-card h3 {
+        font-size: 20px;
+    }
+
+    .step-card p {
+        font-size: 14px;
+    }
+
+    .future-features-section {
+        padding: 25px;
+    }
+
+    .future-features-section .future-intro {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .features-list-grid {
+        grid-template-columns: 1fr; /* Single column for features */
+        gap: 15px;
+    }
+
+    .feature-item {
+        padding: 18px;
+    }
+
+    .feature-item i {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .feature-item h3 {
+        font-size: 17px;
+    }
+
+    .feature-item p {
+        font-size: 13px;
+    }
+
+    .support-section {
+        padding: 25px;
+    }
+
+    .support-section p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .support-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+
+    /* Mobile header adjustments */
+    .main-header {
+        flex-wrap: wrap; /* Allow header content to wrap if needed */
+        justify-content: center; /* Center content on smaller screens */
+    }
+
+    .main-nav {
+        display: none; /* Hide main nav on mobile, controlled by JS for hamburger menu */
+        position: fixed;
+        top: 70px; /* Below the main header */
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: var(--shadow);
+        transform: translateY(-150%); /* Start off-screen */
+        transition: transform 0.3s ease;
+        z-index: 99;
+    }
+
+    .main-nav.active {
+        transform: translateY(0); /* Slide in when active */
+    }
+
+    .main-nav .nav-link {
+        width: 90%; /* Make links full width for easy tapping */
+        text-align: center;
+        padding: 12px;
+        margin: 5px 0;
+    }
+
+    .mobile-menu-btn {
+        display: block; /* Show hamburger button */
+    }
+
+    .user-menu {
+        margin-left: auto; /* Push user menu to the right on desktop */
+        display: none; /* Hide user menu on mobile, handled by mobile menu if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .how-to-buy-content {
+        padding: 10px;
+    }
+
+    .buy-intro-section h1 {
+        font-size: 24px;
+    }
+
+    .buy-intro-section h1 i {
+        font-size: 28px;
+    }
+
+    .buy-intro-section .intro-text {
+        font-size: 14px;
+    }
+
+    .buy-steps-section h2,
+    .future-features-section h2,
+    .support-section h2 {
+        font-size: 22px;
+    }
+
+    .buy-steps-section h2 i,
+    .future-features-section h2 i,
+    .support-section h2 i {
+        font-size: 24px;
+    }
+
+    .step-card {
+        padding: 15px;
+    }
+
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .step-card h3 {
+        font-size: 18px;
+    }
+
+    .step-card p {
+        font-size: 13px;
+    }
+
+    .future-features-section .future-intro {
+        font-size: 14px;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+
+    .feature-item i {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .feature-item h3 {
+        font-size: 16px;
+    }
+
+    .feature-item p {
+        font-size: 12px;
+    }
+
+    .support-section p {
+        font-size: 14px;
+    }
+
+    .support-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    /* Further mobile header adjustments */
+    .logo {
+        flex-grow: 1; /* Allow logo to take available space */
+        text-align: left;
+    }
+
+    .logoancla {
+        width: 100px; /* Smaller logo on very small screens */
+    }
+
+    .mobile-menu-btn {
+        margin-left: auto; /* Push hamburger to the right */
+        font-size: 24px;
+        padding: 5px;
+    }
+}

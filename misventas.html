@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Ventas - Ancla</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="misventas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i> <img class="logoancla" src="logoanclacompleto.png" alt=""></i>
+            </div>
+
+            <style>
+                .logoancla{
+                    margin-top: 10px;
+                    width: 120px;
+                }
+            </style>
+            
+           <nav class="main-nav">
+                <a href="paginaprincipal.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="explorar.html" class="nav-link"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="misventas.html" class="nav-link active"><i class="fas fa-tag"></i> Mis Ventas</a>
+                <a href="miscompras.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Mis Compras</a>
+                <a href="notificaciones.html" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a>
+                <a href="chats.html" class="nav-link"><i class="fas fa-comments"></i> Chats</a>
+            </nav>
+            
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="imagenprueba.png" alt="Usuario">
+                </div>
+               <div class="dropdown-menu">
+                    <a href="miperfil.html"><i class="fas fa-user"></i> Mi Perfil</a>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="sales-content">
+        <div class="sales-header">
+            <h1><i class="fas fa-tag"></i> Mis Ventas</h1>
+            <button class="new-sale-btn animate__animated animate__pulse animate__infinite">
+                <i class="fas fa-plus"></i> Nuevo Producto
+            </button>
+        </div>
+
+        <div class="sales-tabs">
+            <button class="tab-btn active" data-tab="active">Activos</button>
+            <button class="tab-btn" data-tab="inactive">Desactivados</button>
+            <button class="tab-btn" data-tab="sold">Vendidos</button>
+        </div>
+
+        <!-- Productos Activos -->
+        <section class="products-section active" id="active-products">
+            <div class="section-header">
+                <h2><i class="fas fa-bolt"></i> Productos Activos</h2>
+                <span class="badge">3 productos</span>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Destacado</div>
+                    <div class="product-image">
+                        <img src="imagenprueba.png" alt="iPhone 13 Pro Max">
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 13 Pro Max 256GB</h3>
+                        <div class="price">$1,450</div>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 120 vistas</span>
+                            <span><i class="fas fa-heart"></i> 15 favoritos</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="action-btn deactivate-btn"><i class="fas fa-eye-slash"></i> Desactivar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="imagenprueba.png" alt="MacBook Air">
+                    </div>
+                    <div class="product-info">
+                        <h3>MacBook Air M1 2020 8GB/256GB</h3>
+                        <div class="price">$1,200</div>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 85 vistas</span>
+                            <span><i class="fas fa-heart"></i> 8 favoritos</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="action-btn deactivate-btn"><i class="fas fa-eye-slash"></i> Desactivar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Desactivados -->
+        <section class="products-section" id="inactive-products">
+            <div class="section-header">
+                <h2><i class="fas fa-eye-slash"></i> Productos Desactivados</h2>
+                <span class="badge">1 producto</span>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Desactivado</div>
+                    <div class="product-image">
+                        <img src="imagenprueba.png" alt="Samsung Galaxy S22">
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy S22 Ultra 256GB</h3>
+                        <div class="price">$1,100</div>
+                        <div class="product-meta">
+                            <span><i class="fas fa-eye"></i> 210 vistas</span>
+                            <span><i class="fas fa-heart"></i> 22 favoritos</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Editar</button>
+                            <button class="action-btn activate-btn"><i class="fas fa-eye"></i> Activar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Vendidos -->
+        <section class="products-section" id="sold-products">
+            <div class="section-header">
+                <h2><i class="fas fa-check-circle"></i> Productos Vendidos</h2>
+                <span class="badge">2 productos</span>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card sold">
+                    <div class="product-badge">Vendido</div>
+                    <div class="product-image">
+                        <img src="imagenprueba.png" alt="Apple Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Apple Watch Series 7 45mm</h3>
+                        <div class="price">$350</div>
+                        <div class="buyer-info">
+                            <div class="buyer-header">
+                                <i class="fas fa-user"></i>
+                                <span>Comprador:</span>
+                                <strong>María Fernández</strong>
+                            </div>
+                            <button class="view-buyer-btn">Ver detalles</button>
+                        </div>
+                        <div class="sale-date">
+                            <i class="fas fa-calendar-alt"></i> Vendido el: 15/05/2023
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card sold">
+                    <div class="product-badge">Vendido</div>
+                    <div class="product-image">
+                        <img src="imagenprueba.png" alt="Sofá cama">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sofá cama moderno color beige</h3>
+                        <div class="price">$450</div>
+                        <div class="buyer-info">
+                            <div class="buyer-header">
+                                <i class="fas fa-user"></i>
+                                <span>Comprador:</span>
+                                <strong>Carlos González</strong>
+                            </div>
+                            <button class="view-buyer-btn">Ver detalles</button>
+                        </div>
+                        <div class="sale-date">
+                            <i class="fas fa-calendar-alt"></i> Vendido el: 02/05/2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de detalles del comprador -->
+        <div class="modal-overlay" id="buyer-modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h3><i class="fas fa-user"></i> Información del Comprador</h3>
+                <div class="buyer-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Nombre:</span>
+                        <span class="detail-value" id="buyer-name">María Fernández</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Cédula:</span>
+                        <span class="detail-value" id="buyer-id">V-25.456.789</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Teléfono:</span>
+                        <span class="detail-value" id="buyer-phone">+58 412-5551234</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Ubicación:</span>
+                        <span class="detail-value" id="buyer-location">Caracas, Venezuela</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Producto:</span>
+                        <span class="detail-value" id="product-name">Apple Watch Series 7 45mm</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Precio:</span>
+                        <span class="detail-value" id="product-price">$350</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Fecha de venta:</span>
+                        <span class="detail-value" id="sale-date">15/05/2023</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Método de pago:</span>
+                        <span class="detail-value" id="payment-method">Transferencia bancaria</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                    <button class="modal-btn close-btn"><i class="fas fa-times"></i> Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de nuevo producto -->
+        <div class="modal-overlay" id="new-product-modal">
+            <div class="modal-content large">
+                <button class="close-modal">&times;</button>
+                <h3><i class="fas fa-plus-circle"></i> Nuevo Producto</h3>
+                <form class="new-product-form">
+                    <div class="form-group">
+                        <label for="product-title">Título del producto*</label>
+                        <input type="text" id="product-title" placeholder="Ej: iPhone 13 Pro Max 256GB" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-description">Descripción*</label>
+                        <textarea id="product-description" rows="4" placeholder="Describe tu producto en detalle..." required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-price">Precio* ($)</label>
+                            <input type="number" id="product-price" placeholder="Ej: 1450" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-category">Categoría*</label>
+                            <select id="product-category" required>
+                                <option value="">Seleccione una categoría</option>
+                                <option value="tecnologia">Tecnología</option>
+                                <option value="hogar">Hogar</option>
+                                <option value="moda">Moda</option>
+                                <option value="vehiculos">Vehículos</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-location">Ubicación*</label>
+                        <select id="product-location" required>
+                            <option value="">Seleccione una ubicación</option>
+                            <option value="caracas">Caracas</option>
+                            <option value="maracaibo">Maracaibo</option>
+                            <option value="valencia">Valencia</option>
+                            <option value="barquisimeto">Barquisimeto</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Imágenes del producto* (Máx. 5)</label>
+                        <div class="image-upload-container">
+                            <div class="upload-area">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Arrastra tus imágenes aquí o haz clic para seleccionar</p>
+                                <input type="file" id="product-images" multiple accept="image/*">
+                            </div>
+                            <div class="preview-container" id="image-preview">
+                                <!-- Las previsualizaciones de imágenes aparecerán aquí -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Publicar Producto</button>
+                        <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VenMarket</h3>
+                <p>El marketplace seguro de Venezuela donde puedes comprar y vender productos con total confianza.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="comovender.html">Cómo vender</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="terminosycondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contacto@venmarket.com</li>
+                    <li><i class="fas fa-phone"></i> +58 412-1234567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;  2025 Ancla.. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+   <div class="beta-floating-btn">
+        Ancla v0.9 Beta
+    </div>
+
+
+    <style>
+        /* Estilos para el botón flotante de versión Beta */
+.beta-floating-btn {
+    position: fixed;
+    bottom: 25px; /* Ajusta la distancia desde abajo */
+    right: 25px; /* Ajusta la distancia desde la derecha */
+    background-color: #FFD700; /* Color amarillo */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 12px 20px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para un toque más profesional */
+}
+
+.beta-floating-btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes responsive para el botón flotante */
+@media (max-width: 768px) {
+    .beta-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beta-floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+    </style>
+    <script src="paginaprincipal.js"></script>
+    <script src="misventas.js"></script>
+</body>
+</html>

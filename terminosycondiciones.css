@@ -1,0 +1,153 @@
+/* Estilos específicos para la página de Términos y Condiciones */
+.terms-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+.terms-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.terms-header h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.last-updated {
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.terms-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.terms-intro {
+    margin-bottom: 30px;
+}
+
+.terms-intro p {
+    margin-bottom: 20px;
+}
+
+.acceptance-box {
+    background-color: rgba(139, 195, 74, 0.1);
+    border-left: 4px solid var(--primary-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.terms-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.terms-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.terms-section h2 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.terms-section h3 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+}
+
+.terms-section p, .terms-section ul, .terms-section ol {
+    margin-bottom: 15px;
+}
+
+.terms-section ul, .terms-section ol {
+    padding-left: 20px;
+}
+
+.terms-section li {
+    margin-bottom: 8px;
+}
+
+.contact-info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.acceptance-footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terms-content {
+        padding: 20px 15px;
+    }
+    
+    .terms-header h1 {
+        font-size: 28px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .terms-container {
+        padding: 20px;
+    }
+    
+    .terms-section h2 {
+        font-size: 20px;
+    }
+    
+    .terms-section h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-header h1 {
+        font-size: 24px;
+    }
+    
+    .terms-section h2 {
+        font-size: 19px;
+    }
+    
+    .terms-section h3 {
+        font-size: 16px;
+    }
+    
+    .terms-section p, .terms-section ul, .terms-section ol {
+        font-size: 15px;
+    }
+}

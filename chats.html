@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - VenMarket</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="chats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i> <img class="logoancla" src="logoanclacompleto.png" alt="VenMarket Logo"></i>
+            </div>
+
+            <style>
+                .logoancla{
+                    margin-top: 10px;
+                    width: 120px;
+                }
+            </style>
+            
+            <nav class="main-nav">
+                <a href="paginaprincipal.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="explorar.html" class="nav-link"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="misventas.html" class="nav-link"><i class="fas fa-tag"></i> Mis Ventas</a>
+                <a href="miscompras.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Mis Compras</a>
+                <a href="notificaciones.html" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a>
+                <a href="chats.html" class="nav-link active"><i class="fas fa-comments"></i> Chats</a>
+            </nav>
+            
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="https://placehold.co/50x50/3d3d3d/FFFFFF?text=U" alt="Usuario">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="miperfil.html"><i class="fas fa-user"></i> Mi Perfil</a>
+                    <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="chats-content-full-page">
+        <div class="chat-container">
+            <!-- Chat List Sidebar -->
+            <div class="chat-list-sidebar active-on-mobile"> <!-- 'active-on-mobile' para controlar visibilidad en móvil -->
+                <div class="sidebar-header">
+                    <h2><i class="fas fa-comments"></i> Tus Chats</h2>
+                    
+                </div>
+                <div class="search-chat">
+                    <input type="text" placeholder="Buscar chat...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="chat-list custom-scroll">
+                    <!-- Chat Item 1 -->
+                    <div class="chat-item active" data-chat-id="chat-user-1">
+                        <img src="https://placehold.co/50x50/2E7D32/FFFFFF?text=A" alt="Avatar Usuario" class="chat-avatar">
+                        <div class="chat-info">
+                            <h4>Ana V.</h4>
+                            <p class="last-message">¡Hola! ¿Aún disponible la laptop?</p>
+                            <span class="chat-time">Hace 5 min</span>
+                        </div>
+                        <div class="unread-count">2</div>
+                    </div>
+                    <!-- Chat Item 2 -->
+                    <div class="chat-item" data-chat-id="chat-user-2">
+                        <img src="https://placehold.co/50x50/8BC34A/000000?text=C" alt="Avatar Usuario" class="chat-avatar">
+                        <div class="chat-info">
+                            <h4>Carlos G.</h4>
+                            <p class="last-message">Ok, nos vemos mañana para la entrega.</p>
+                            <span class="chat-time">Hace 1 hora</span>
+                        </div>
+                    </div>
+                    <!-- Chat Item 3 -->
+                    <div class="chat-item" data-chat-id="chat-user-3">
+                        <img src="https://placehold.co/50x50/3d3d3d/FFFFFF?text=T" alt="Avatar Usuario" class="chat-avatar">
+                        <div class="chat-info">
+                            <h4>TecnoVentas</h4>
+                            <p class="last-message">Su pedido #1234 ha sido despachado.</p>
+                            <span class="chat-time">Ayer</span>
+                        </div>
+                    </div>
+                    <!-- Chat Item 4 -->
+                    <div class="chat-item" data-chat-id="chat-user-4">
+                        <img src="https://placehold.co/50x50/2E7D32/FFFFFF?text=M" alt="Avatar Usuario" class="chat-avatar">
+                        <div class="chat-info">
+                            <h4>María P.</h4>
+                            <p class="last-message">¿Aceptas $100 por la silla?</p>
+                            <span class="chat-time">3 días</span>
+                        </div>
+                    </div>
+                    <!-- Chat Item 5 -->
+                    <div class="chat-item" data-chat-id="chat-user-5">
+                        <img src="https://placehold.co/50x50/8BC34A/000000?text=J" alt="Avatar Usuario" class="chat-avatar">
+                        <div class="chat-info">
+                            <h4>José L.</h4>
+                            <p class="last-message">Perfecto, ¿cuándo podrías enviarlo?</p>
+                            <span class="chat-time">1 semana</span>
+                        </div>
+                    </div>
+                     <!-- Chat Item 6 -->
+                     <div class="chat-item" data-chat-id="chat-user-6">
+                        <img src="https://placehold.co/50x50/3d3d3d/FFFFFF?text=R" alt="Avatar Usuario" class="chat-avatar">
+                        <div class="chat-info">
+                            <h4>Roberto S.</h4>
+                            <p class="last-message">¿Puedes entregar en la Candelaria?</p>
+                            <span class="chat-time">2 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Chat Window -->
+            <div class="active-chat-window" id="chat-user-1">
+                <div class="chat-header">
+                    <button class="back-to-list-btn"><i class="fas fa-arrow-left"></i></button>
+                    <img src="https://placehold.co/50x50/2E7D32/FFFFFF?text=A" alt="Avatar Usuario" class="chat-avatar">
+                    <div class="chat-header-info">
+                        <h3>Ana V.</h3>
+                        <p class="chat-status">En línea</p>
+                    </div>
+                    <div class="chat-header-actions">
+                        <button><i class="fas fa-phone-alt"></i></button>
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <div class="chat-messages custom-scroll">
+                    <!-- Received Message -->
+                    <div class="message-wrapper received">
+                        <img src="https://placehold.co/30x30/2E7D32/FFFFFF?text=A" alt="Avatar" class="message-avatar">
+                        <div class="message-content">
+                            <p>¡Hola! ¿Aún disponible la laptop?</p>
+                            <span class="message-time">10:30 AM</span>
+                        </div>
+                    </div>
+                    <!-- Sent Message -->
+                    <div class="message-wrapper sent">
+                        <div class="message-content">
+                            <p>Sí, claro. Está en perfecto estado.</p>
+                            <span class="message-time">10:32 AM</span>
+                        </div>
+                        <img src="https://placehold.co/30x30/3d3d3d/FFFFFF?text=U" alt="Avatar" class="message-avatar">
+                    </div>
+                    <!-- Received Message -->
+                    <div class="message-wrapper received">
+                        <img src="https://placehold.co/30x30/2E7D32/FFFFFF?text=A" alt="Avatar" class="message-avatar">
+                        <div class="message-content">
+                            <p>Genial. ¿Podrías enviarme más fotos?</p>
+                            <span class="message-time">10:35 AM</span>
+                        </div>
+                    </div>
+                    <!-- Sent Message -->
+                    <div class="message-wrapper sent">
+                        <div class="message-content">
+                            <p>¡Claro! Te las envío en un momento.</p>
+                            <span class="message-time">10:36 AM</span>
+                        </div>
+                        <img src="https://placehold.co/30x30/3d3d3d/FFFFFF?text=U" alt="Avatar" class="message-avatar">
+                    </div>
+                     <!-- Received Message -->
+                     <div class="message-wrapper received">
+                        <img src="https://placehold.co/30x30/2E7D32/FFFFFF?text=A" alt="Avatar" class="message-avatar">
+                        <div class="message-content">
+                            <p>Vale, espero. ¿Cuál es el precio final que manejas?</p>
+                            <span class="message-time">10:40 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                    <input type="text" placeholder="Escribe un mensaje...">
+                    <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <!-- Other chat windows (hidden by default) -->
+            <div class="active-chat-window" id="chat-user-2">
+                <div class="chat-header">
+                    <button class="back-to-list-btn"><i class="fas fa-arrow-left"></i></button>
+                    <img src="https://placehold.co/50x50/8BC34A/000000?text=C" alt="Avatar Usuario" class="chat-avatar">
+                    <div class="chat-header-info">
+                        <h3>Carlos G.</h3>
+                        <p class="chat-status">Visto hace 1 hora</p>
+                    </div>
+                    <div class="chat-header-actions">
+                        <button><i class="fas fa-phone-alt"></i></button>
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <div class="chat-messages custom-scroll">
+                    <div class="message-wrapper received">
+                        <img src="https://placehold.co/30x30/8BC34A/000000?text=C" alt="Avatar" class="message-avatar">
+                        <div class="message-content">
+                            <p>Confirmado, nos vemos a las 3 PM.</p>
+                            <span class="message-time">02:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="message-wrapper sent">
+                        <div class="message-content">
+                            <p>Perfecto, estaré allí.</p>
+                            <span class="message-time">02:05 PM</span>
+                        </div>
+                        <img src="https://placehold.co/30x30/3d3d3d/FFFFFF?text=U" alt="Avatar" class="message-avatar">
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                    <input type="text" placeholder="Escribe un mensaje...">
+                    <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <!-- More active-chat-window divs can be added here following the pattern -->
+        </div>
+    </main>
+
+    <script src="paginaprincipal.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatItems = document.querySelectorAll('.chat-item');
+            const chatWindows = document.querySelectorAll('.active-chat-window');
+            const backToListBtns = document.querySelectorAll('.back-to-list-btn');
+            const chatListSidebar = document.querySelector('.chat-list-sidebar');
+            const initialActiveChatWindow = document.querySelector('.active-chat-window.active');
+
+            // Function to show a specific chat window and hide the list on mobile
+            const showChat = (chatId) => {
+                chatWindows.forEach(window => {
+                    window.classList.remove('active');
+                    window.style.display = 'none'; // Ensure it's hidden when not active
+                });
+                const selectedChat = document.getElementById(chatId);
+                if (selectedChat) {
+                    selectedChat.classList.add('active');
+                    selectedChat.style.display = 'flex'; // Ensure chat window is displayed
+                    // Add animation for slide in on mobile (only if changing view)
+                    if (window.innerWidth <= 768) {
+                        selectedChat.classList.add('animate__animated', 'animate__slideInRight', 'animate__faster');
+                        chatListSidebar.classList.remove('active-on-mobile'); // Hide sidebar
+                    }
+                }
+            };
+
+            // Function to show chat list and hide chat window on mobile
+            const showChatList = () => {
+                chatWindows.forEach(window => {
+                    window.classList.remove('active');
+                    window.style.display = 'none'; // Hide all chat windows
+                    window.classList.remove('animate__animated', 'animate__slideInRight', 'animate__faster'); // Clean up animation
+                });
+                
+                chatListSidebar.classList.add('active-on-mobile'); // Show sidebar
+                // Add animation for slide in on mobile (only if changing view)
+                if (window.innerWidth <= 768) {
+                    chatListSidebar.classList.add('animate__animated', 'animate__slideInLeft', 'animate__faster');
+                }
+            };
+
+            // Handle clicking on a chat item
+            chatItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    chatItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    item.querySelector('.unread-count')?.remove(); // Remove unread count on click
+                    const chatId = item.dataset.chatId;
+                    showChat(chatId);
+                });
+            });
+
+            // Handle clicking the back button in chat window
+            backToListBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    showChatList();
+                });
+            });
+
+            // Initial setup based on screen size
+            const handleInitialLayout = () => {
+                // Ensure body and html are full height for this page
+                document.documentElement.style.height = '100%';
+                document.body.style.height = '100%';
+                document.body.style.margin = '0';
+                document.body.style.display = 'flex';
+                document.body.style.flexDirection = 'column';
+
+                if (window.innerWidth <= 768) {
+                    // On mobile, default to showing the chat list, hide chat windows
+                    showChatList();
+                    // Ensure the initial active chat window is hidden if the list is shown
+                    if (initialActiveChatWindow) {
+                        initialActiveChatWindow.style.display = 'none';
+                    }
+                } else {
+                    // On desktop, show both the chat list and the first active chat window
+                    chatListSidebar.classList.add('active-on-mobile'); // Ensure sidebar is always visible on desktop
+                    chatListSidebar.style.display = 'flex'; // Ensure flex display on desktop
+                    chatListSidebar.classList.remove('animate__animated', 'animate__slideInLeft', 'animate__slideOutLeft', 'animate__faster'); // Clean up mobile animations
+
+                    if (initialActiveChatWindow) {
+                        initialActiveChatWindow.classList.add('active');
+                        initialActiveChatWindow.style.display = 'flex'; // Ensure flex display on desktop
+                        initialActiveChatWindow.classList.remove('animate__animated', 'animate__slideInRight', 'animate__faster'); // Clean up mobile animations
+                    } else {
+                        chatWindows.forEach(window => window.style.display = 'none');
+                    }
+                }
+            };
+
+            handleInitialLayout(); // Call on initial load
+
+            // Handle resize events to adjust layout
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    handleInitialLayout();
+                }, 250); // Debounce resize event
+            });
+            
+            // Auto-scroll to bottom of messages when a chat is opened or new messages added
+            const scrollToBottom = (element) => {
+                element.scrollTop = element.scrollHeight;
+            };
+
+            // Observe chat-messages for changes to auto-scroll
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                        const target = mutation.target;
+                        if (target.classList.contains('chat-messages')) {
+                            scrollToBottom(target);
+                        }
+                    }
+                });
+            });
+
+            chatWindows.forEach(windowEl => {
+                const chatMessages = windowEl.querySelector('.chat-messages');
+                if (chatMessages) {
+                    observer.observe(chatMessages, { childList: true });
+                }
+            });
+
+            // Scroll to bottom when a chat window becomes active initially
+            // This is especially important for desktop, or when a chat is opened on mobile
+            chatItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const chatId = item.dataset.chatId;
+                    const selectedChatWindow = document.getElementById(chatId);
+                    if (selectedChatWindow) {
+                        const chatMessages = selectedChatWindow.querySelector('.chat-messages');
+                        if (chatMessages) {
+                            scrollToBottom(chatMessages);
+                        }
+                    }
+                });
+            });
+
+            // Initial scroll to bottom for the default active chat (if any)
+            const initialActiveChatMessages = document.querySelector('.active-chat-window.active .chat-messages');
+            if (initialActiveChatMessages) {
+                scrollToBottom(initialActiveChatMessages);
+            }
+        });
+    </script>
+</body>
+</html>

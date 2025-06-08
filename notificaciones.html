@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - Ancla</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="notificaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i> <img class="logoancla" src="logoanclacompleto.png" alt="VenMarket Logo"></i>
+            </div>
+
+            <style>
+                .logoancla{
+                    margin-top: 10px;
+                    width: 120px;
+                }
+            </style>
+            
+           <nav class="main-nav">
+                <a href="paginaprincipal.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="explorar.html" class="nav-link"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="misventas.html" class="nav-link"><i class="fas fa-tag"></i> Mis Ventas</a>
+                <a href="miscompras.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Mis Compras</a>
+                <a href="notificaciones.html" class="nav-link active"><i class="fas fa-bell"></i> Notificaciones</a>
+                <a href="chats.html" class="nav-link"><i class="fas fa-comments"></i> Chats</a>
+            </nav>
+            
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="imagenprueba.png" alt="Usuario">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="miperfil.html"><i class="fas fa-user"></i> Mi Perfil</a>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="notifications-content">
+        <div class="notifications-header">
+            <h1><i class="fas fa-bell"></i> Mis Notificaciones</h1>
+            <div class="notification-actions">
+                <button class="action-btn mark-all-read-btn"><i class="fas fa-check-double"></i> Marcar todo como leído</button>
+                <button class="action-btn clear-all-btn"><i class="fas fa-trash-alt"></i> Limpiar todo</button>
+            </div>
+        </div>
+
+        <div class="notifications-tabs">
+            <button class="tab-btn active" data-tab="all">Todas</button>
+            <button class="tab-btn" data-tab="system">Sistema</button>
+            <button class="tab-btn" data-tab="product">Productos</button>
+            <button class="tab-btn" data-tab="suggestions">Sugerencias</button>
+        </div>
+
+        <!-- Sección de todas las notificaciones -->
+        <section class="notification-section active" id="all-notifications">
+            <div class="section-header">
+                <h2><i class="fas fa-stream"></i> Últimas Notificaciones</h2>
+                <span class="badge">6 nuevas</span>
+            </div>
+            <div class="notification-list">
+                <!-- Notificación de sistema (Novedad) -->
+                <div class="notification-card new" data-type="system">
+                    <div class="notification-icon new">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>¡Nueva función disponible!</h3>
+                        <p>Ahora puedes chatear directamente con los vendedores y compradores desde la app.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 5 minutos</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de producto (Pregunta) -->
+                <div class="notification-card new" data-type="product">
+                    <div class="notification-icon new">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Pregunta sobre tu producto "Sofá cama moderno"</h3>
+                        <p>Un usuario ha preguntado: "¿Es posible negociar el precio?"</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 30 minutos</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de sugerencia (Nuevo producto) -->
+                <div class="notification-card" data-type="suggestions">
+                    <div class="notification-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Sugerencia: "Monitor Gamer 27" 144Hz"</h3>
+                        <p>Un producto similar a tus búsquedas recientes ha sido publicado en Maracaibo.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 1 hora</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de sistema (Actualización) -->
+                <div class="notification-card" data-type="system">
+                    <div class="notification-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Actualización de seguridad importante</h3>
+                        <p>Hemos mejorado nuestros sistemas de protección de datos. Te invitamos a revisar nuestra política de privacidad.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Ayer</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de producto (Venta) -->
+                <div class="notification-card" data-type="product">
+                    <div class="notification-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>¡Tu "Samsung S22 Ultra" ha sido vendido!</h3>
+                        <p>El comprador ha confirmado la recepción del producto. El pago se procesará en las próximas 24 horas.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 2 días</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de sugerencia (Categoría) -->
+                <div class="notification-card" data-type="suggestions">
+                    <div class="notification-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Descubre más productos en "Deportes"</h3>
+                        <p>Hemos añadido nuevas subcategorías y filtros para tu experiencia de compra.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 3 días</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de notificaciones del sistema -->
+        <section class="notification-section" id="system-notifications">
+            <div class="section-header">
+                <h2><i class="fas fa-cogs"></i> Notificaciones del Sistema</h2>
+                <span class="badge">2 nuevas</span>
+            </div>
+            <div class="notification-list">
+                <!-- Notificación de sistema (Novedad) -->
+                <div class="notification-card new">
+                    <div class="notification-icon new">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>¡Nueva función disponible!</h3>
+                        <p>Ahora puedes chatear directamente con los vendedores y compradores desde la app.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 5 minutos</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de sistema (Actualización) -->
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Actualización de seguridad importante</h3>
+                        <p>Hemos mejorado nuestros sistemas de protección de datos. Te invitamos a revisar nuestra política de privacidad.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Ayer</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de notificaciones de productos -->
+        <section class="notification-section" id="product-notifications">
+            <div class="section-header">
+                <h2><i class="fas fa-tag"></i> Notificaciones de Productos</h2>
+                <span class="badge">1 nueva</span>
+            </div>
+            <div class="notification-list">
+                <!-- Notificación de producto (Pregunta) -->
+                <div class="notification-card new">
+                    <div class="notification-icon new">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Pregunta sobre tu producto "Sofá cama moderno"</h3>
+                        <p>Un usuario ha preguntado: "¿Es posible negociar el precio?"</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 30 minutos</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de producto (Venta) -->
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>¡Tu "Samsung S22 Ultra" ha sido vendido!</h3>
+                        <p>El comprador ha confirmado la recepción del producto. El pago se procesará en las próximas 24 horas.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 2 días</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de sugerencias -->
+        <section class="notification-section" id="suggestions-notifications">
+            <div class="section-header">
+                <h2><i class="fas fa-lightbulb"></i> Sugerencias y Recomendaciones</h2>
+                <span class="badge">0 nuevas</span>
+            </div>
+            <div class="notification-list">
+                <!-- Notificación de sugerencia (Nuevo producto) -->
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Sugerencia: "Monitor Gamer 27" 144Hz"</h3>
+                        <p>Un producto similar a tus búsquedas recientes ha sido publicado en Maracaibo.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 1 hora</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+
+                <!-- Notificación de sugerencia (Categoría) -->
+                <div class="notification-card">
+                    <div class="notification-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="notification-info">
+                        <h3>Descubre más productos en "Deportes"</h3>
+                        <p>Hemos añadido nuevas subcategorías y filtros para tu experiencia de compra.</p>
+                        <span class="notification-date"><i class="fas fa-clock"></i> Hace 3 días</span>
+                    </div>
+                    <button class="read-btn"><i class="fas fa-eye"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Ancla</h3>
+                <p>El marketplace seguro de Venezuela donde puedes comprar y vender productos con total confianza.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="comovender.html">Cómo vender</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="terminosycondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contacto@venmarket.com</li>
+                    <li><i class="fas fa-phone"></i> +58 412-1234567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;  2025 Ancla.. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+   <div class="beta-floating-btn">
+        Ancla v0.9 Beta
+    </div>
+
+
+    <style>
+        /* Estilos para el botón flotante de versión Beta */
+.beta-floating-btn {
+    position: fixed;
+    bottom: 25px; /* Ajusta la distancia desde abajo */
+    right: 25px; /* Ajusta la distancia desde la derecha */
+    background-color: #FFD700; /* Color amarillo */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 12px 20px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para un toque más profesional */
+}
+
+.beta-floating-btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes responsive para el botón flotante */
+@media (max-width: 768px) {
+    .beta-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beta-floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+    </style>
+    <script src="paginaprincipal.js"></script>
+    <!-- Script para manejar las notificaciones y los tabs -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.notifications-tabs .tab-btn');
+            const notificationSections = document.querySelectorAll('.notification-section');
+            const markAllReadBtn = document.querySelector('.mark-all-read-btn');
+            const clearAllBtn = document.querySelector('.clear-all-btn');
+            const readButtons = document.querySelectorAll('.notification-card .read-btn');
+
+            // Function to activate a tab
+            const activateTab = (tabName) => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`.tab-btn[data-tab="${tabName}"]`).classList.add('active');
+
+                notificationSections.forEach(section => section.classList.remove('active'));
+                if (tabName === 'all') {
+                    document.getElementById('all-notifications').classList.add('active');
+                } else {
+                    document.getElementById(`${tabName}-notifications`).classList.add('active');
+                }
+                updateNewBadgeCounts();
+            };
+
+            // Event listeners for tab buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tab = button.dataset.tab;
+                    activateTab(tab);
+                });
+            });
+
+            // Function to update the "new" badge counts for each section and the main header
+            const updateNewBadgeCounts = () => {
+                let totalNew = 0;
+                notificationSections.forEach(section => {
+                    const newNotificationsInSection = section.querySelectorAll('.notification-card.new').length;
+                    const badge = section.querySelector('.badge');
+                    if (badge) {
+                        badge.textContent = `${newNotificationsInSection} nueva${newNotificationsInSection === 1 ? '' : 's'}`;
+                        if (newNotificationsInSection === 0) {
+                             badge.textContent = `0 nuevas`;
+                        }
+                    }
+                    totalNew += newNotificationsInSection;
+                });
+
+                const mainHeaderBadge = document.querySelector('.notifications-header .badge');
+                if (mainHeaderBadge) {
+                    mainHeaderBadge.textContent = `${totalNew} nueva${totalNew === 1 ? '' : 's'}`;
+                     if (totalNew === 0) {
+                             mainHeaderBadge.textContent = `0 nuevas`;
+                        }
+                }
+            };
+
+            // Initial badge count update on load
+            updateNewBadgeCounts();
+
+            // Mark all as read functionality
+            markAllReadBtn.addEventListener('click', () => {
+                document.querySelectorAll('.notification-card.new').forEach(card => {
+                    card.classList.remove('new');
+                    const icon = card.querySelector('.notification-icon');
+                    if (icon) icon.classList.remove('new');
+                });
+                updateNewBadgeCounts();
+            });
+
+            // Clear all notifications functionality (removes them from DOM)
+            clearAllBtn.addEventListener('click', () => {
+                document.querySelectorAll('.notification-list').forEach(list => {
+                    list.innerHTML = '<p class="no-notifications-message">No hay notificaciones en esta sección.</p>';
+                });
+                updateNewBadgeCounts();
+            });
+
+            // Mark single notification as read
+            readButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const card = event.target.closest('.notification-card');
+                    if (card) {
+                        card.classList.remove('new');
+                        const icon = card.querySelector('.notification-icon');
+                        if (icon) icon.classList.remove('new');
+                        updateNewBadgeCounts();
+                    }
+                });
+            });
+
+            // Add a "no notifications" message if a section is empty initially
+            notificationSections.forEach(section => {
+                if (section.querySelectorAll('.notification-card').length === 0) {
+                    const list = section.querySelector('.notification-list');
+                    if (list) {
+                        list.innerHTML = '<p class="no-notifications-message">No hay notificaciones en esta sección.</p>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

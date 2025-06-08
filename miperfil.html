@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Ancla</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="miperfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i> <img class="logoancla" src="logoanclacompleto.png" alt="VenMarket Logo"></i>
+            </div>
+
+            <style>
+                .logoancla{
+                    margin-top: 10px;
+                    width: 120px;
+                }
+            </style>
+            
+           <nav class="main-nav">
+                <a href="paginaprincipal.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="explorar.html" class="nav-link"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="misventas.html" class="nav-link"><i class="fas fa-tag"></i> Mis Ventas</a>
+                <a href="miscompras.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Mis Compras</a>
+                <a href="notificaciones.html" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a>
+                <a href="chats.html" class="nav-link"><i class="fas fa-comments"></i> Chats</a>
+            </nav>
+            
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="imagenprueba.png" alt="Usuario">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="miperfil.html"><i class="fas fa-user"></i> Mi Perfil</a>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="profile-content">
+        <section class="profile-header">
+            <div class="profile-info-main">
+                <div class="user-avatar-large">
+                    <img src="https://placehold.co/150x150/2E7D32/FFFFFF?text=Usuario" alt="Foto de Perfil">
+                    <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="user-details-summary">
+                    <h1 class="user-name">Ana Rodríguez <i class="fas fa-check-circle verified-icon"></i></h1>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5 (128 reseñas)</span>
+                    </div>
+                    <p class="user-bio">Vendedora apasionada de tecnología y artículos para el hogar en Caracas. ¡Tu confianza es mi prioridad!</p>
+                    <div class="profile-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</span>
+                        <span><i class="fas fa-calendar-alt"></i> Miembro desde: Enero 2022</span>
+                    </div>
+                    <button class="primary-btn contact-profile-btn"><i class="fas fa-comment"></i> Contactar</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="publications">Publicaciones</button>
+            <button class="tab-btn" data-tab="reviews">Reseñas</button>
+            <button class="tab-btn" data-tab="activity">Actividad</button>
+            <button class="tab-btn" data-tab="saved">Guardados</button>
+            <button class="tab-btn" data-tab="recently-viewed">Vistos Recientemente</button>
+        </div>
+
+        <!-- Sección de Publicaciones (Pública) -->
+        <section class="profile-section active" id="publications-section">
+            <div class="section-header">
+                <h2><i class="fas fa-boxes"></i> Mis Publicaciones</h2>
+                <span class="badge">Ventas realizadas: 45</span>
+            </div>
+            <div class="products-grid">
+                <!-- Producto Vendido 1 -->
+                <div class="product-card sold">
+                    <div class="product-badge">Vendido</div>
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/2E7D32/FFFFFF?text=Apple+Watch" alt="Apple Watch Series 7">
+                    </div>
+                    <div class="product-info">
+                        <h3>Apple Watch Series 7 45mm</h3>
+                        <div class="price">$350</div>
+                        <div class="sale-date">
+                            <i class="fas fa-calendar-alt"></i> Vendido el: 15/05/2023
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Activo 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Activo</div>
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/8BC34A/000000?text=PS5" alt="PlayStation 5">
+                    </div>
+                    <div class="product-info">
+                        <h3>PlayStation 5 Digital Edition</h3>
+                        <div class="price">$750</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Maracay
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Vendido 2 -->
+                <div class="product-card sold">
+                    <div class="product-badge">Vendido</div>
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/2E7D32/FFFFFF?text=Sofá+Cama" alt="Sofá Cama">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sofá cama moderno color beige</h3>
+                        <div class="price">$450</div>
+                        <div class="sale-date">
+                            <i class="fas fa-calendar-alt"></i> Vendido el: 02/05/2023
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Activo 2 -->
+                <div class="product-card">
+                    <div class="product-badge">Activo</div>
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/8BC34A/000000?text=Bicicleta" alt="Bicicleta Montañera">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bicicleta Montañera Profesional</h3>
+                        <div class="price">$500</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Valencia
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="misventas.html" class="see-more-link">Ver todas mis ventas <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <!-- Sección de Reseñas (Pública) -->
+        <section class="profile-section" id="reviews-section">
+            <div class="section-header">
+                <h2><i class="fas fa-comments"></i> Reseñas Recibidas</h2>
+                <span class="badge">Últimas 5</span>
+            </div>
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="https://placehold.co/50x50/3d3d3d/FFFFFF?text=C" alt="Comprador 1" class="reviewer-avatar">
+                        <div>
+                            <h4>Carlos G.</h4>
+                            <div class="rating-small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">"¡Excelente vendedora! El producto llegó en perfectas condiciones y muy rápido. Muy recomendable."</p>
+                    <span class="review-date"><i class="fas fa-calendar-alt"></i> 20/05/2024</span>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="https://placehold.co/50x50/3d3d3d/FFFFFF?text=M" alt="Comprador 2" class="reviewer-avatar">
+                        <div>
+                            <h4>María F.</h4>
+                            <div class="rating-small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">"Muy buena comunicación y dispuesta a ayudar. El artículo tal cual la descripción. ¡Gracias!"</p>
+                    <span class="review-date"><i class="fas fa-calendar-alt"></i> 10/05/2024</span>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="https://placehold.co/50x50/3d3d3d/FFFFFF?text=L" alt="Comprador 3" class="reviewer-avatar">
+                        <div>
+                            <h4>Luis P.</h4>
+                            <div class="rating-small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">"Hubo un pequeño retraso con el envío, pero la vendedora fue muy atenta y lo resolvió. Contenta con la compra."</p>
+                    <span class="review-date"><i class="fas fa-calendar-alt"></i> 01/05/2024</span>
+                </div>
+            </div>
+            <button class="primary-btn full-width-btn write-review-btn"><i class="fas fa-pen"></i> Escribir Reseña</button>
+        </section>
+
+        <!-- Sección de Actividad (Privada) -->
+        <section class="profile-section" id="activity-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Mi Actividad Reciente</h2>
+                <span class="badge">Últimas 10</span>
+            </div>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-tag"></i></div>
+                    <div class="activity-info">
+                        <p>Has publicado un nuevo producto: <strong>"Laptop Gaming ASUS ROG"</strong></p>
+                        <span class="activity-date"><i class="fas fa-clock"></i> Hace 2 horas</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="activity-info">
+                        <p>Has realizado una compra: <strong>"Auriculares Bluetooth Sony"</strong></p>
+                        <span class="activity-date"><i class="fas fa-clock"></i> Ayer</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="activity-info">
+                        <p>Venta completada de: <strong>"Apple Watch Series 7"</strong></p>
+                        <span class="activity-date"><i class="fas fa-clock"></i> Hace 3 días</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-heart"></i></div>
+                    <div class="activity-info">
+                        <p>Has añadido <strong>"Cámara DSLR Canon"</strong> a tus favoritos.</p>
+                        <span class="activity-date"><i class="fas fa-clock"></i> Hace 1 semana</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon"><i class="fas fa-eye-slash"></i></div>
+                    <div class="activity-info">
+                        <p>Has desactivado tu publicación: <strong>"Teclado Mecánico RGB"</strong></p>
+                        <span class="activity-date"><i class="fas fa-clock"></i> Hace 2 semanas</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Ver todo mi historial de actividad <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <!-- Sección de Guardados (Privada) -->
+        <section class="profile-section" id="saved-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bookmark"></i> Mis Productos Guardados</h2>
+                <span class="badge">3 productos</span>
+            </div>
+            <div class="products-grid">
+                <!-- Producto Guardado 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/8BC34A/000000?text=Tablet+Samsung" alt="Tablet Samsung Galaxy Tab S8">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tablet Samsung Galaxy Tab S8</h3>
+                        <div class="price">$650</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Maracaibo
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Guardado 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/2E7D32/FFFFFF?text=Smart+TV+LG" alt="Smart TV LG 65 pulgadas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart TV LG 65" 4K UHD</h3>
+                        <div class="price">$1,800</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Caracas
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Guardado 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/8BC34A/000000?text=Silla+Gamer" alt="Silla Gamer Ergonómica">
+                    </div>
+                    <div class="product-info">
+                        <h3>Silla Gamer Ergonómica</h3>
+                        <div class="price">$200</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Barquisimeto
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Ver todos mis guardados <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <!-- Sección de Vistos Recientemente (Privada) -->
+        <section class="profile-section" id="recently-viewed-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Vistos Recientemente</h2>
+                <span class="badge">4 productos</span>
+            </div>
+            <div class="products-grid">
+                <!-- Producto Visto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/2E7D32/FFFFFF?text=Cafetera" alt="Cafetera Espresso">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cafetera Espresso Automática</h3>
+                        <div class="price">$280</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Valencia
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Visto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/8BC34A/000000?text=Drone" alt="Drone DJI Mini 3 Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Drone DJI Mini 3 Pro</h3>
+                        <div class="price">$999</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Caracas
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Visto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/2E7D32/FFFFFF?text=Audífonos" alt="Audífonos Bose QuietComfort">
+                    </div>
+                    <div class="product-info">
+                        <h3>Audífonos Bose QuietComfort 35 II</h3>
+                        <div class="price">$250</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Barquisimeto
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto Visto 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x200/8BC34A/000000?text=Zapatos+Adidas" alt="Zapatos Adidas UltraBoost">
+                    </div>
+                    <div class="product-info">
+                        <h3>Zapatos Adidas UltraBoost 22</h3>
+                        <div class="price">$150</div>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i> Maracaibo
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="see-more-link">Ver todo mi historial de visitas <i class="fas fa-arrow-right"></i></a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VenMarket</h3>
+                <p>El marketplace seguro de Venezuela donde puedes comprar y vender productos con total confianza.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="comovender.html">Cómo vender</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="terminosycondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contacto@venmarket.com</li>
+                    <li><i class="fas fa-phone"></i> +58 412-1234567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;  2025 Ancla.. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+   <div class="beta-floating-btn">
+        Ancla v0.9 Beta
+    </div>
+
+
+    <style>
+        /* Estilos para el botón flotante de versión Beta */
+.beta-floating-btn {
+    position: fixed;
+    bottom: 25px; /* Ajusta la distancia desde abajo */
+    right: 25px; /* Ajusta la distancia desde la derecha */
+    background-color: #FFD700; /* Color amarillo */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 12px 20px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para un toque más profesional */
+}
+
+.beta-floating-btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes responsive para el botón flotante */
+@media (max-width: 768px) {
+    .beta-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beta-floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+    </style>
+    <script src="paginaprincipal.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.profile-tabs .tab-btn');
+            const profileSections = document.querySelectorAll('.profile-section');
+
+            // Function to activate a tab
+            const activateTab = (tabName) => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`.tab-btn[data-tab="${tabName}"]`).classList.add('active');
+
+                profileSections.forEach(section => section.classList.remove('active'));
+                document.getElementById(`${tabName}-section`).classList.add('active');
+            };
+
+            // Event listeners for tab buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tab = button.dataset.tab;
+                    activateTab(tab);
+                });
+            });
+
+            // Initial tab activation (e.g., "Publicaciones" by default)
+            activateTab('publications');
+
+            // Example of how to toggle the edit avatar button (if implemented)
+            const editAvatarBtn = document.querySelector('.edit-avatar-btn');
+            if (editAvatarBtn) {
+                editAvatarBtn.addEventListener('click', () => {
+                    // Logic to open file input or image editor
+                    console.log('Edit avatar button clicked!');
+                    // You might trigger a hidden file input click here
+                    // document.getElementById('file-input-id').click();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

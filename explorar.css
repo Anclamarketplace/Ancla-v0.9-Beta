@@ -1,0 +1,820 @@
+/* Estilos específicos para la página de exploración */
+.explore-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Filtros de búsqueda - Desktop */
+.explore-filters {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    /* By default, hide apply buttons on desktop */
+    .filter-actions.mobile-only {
+        display: none;
+    }
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.search-box button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+}
+
+.search-box button:hover {
+    background-color: var(--secondary-color);
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-size: 14px;
+    color: var(--dark-gray);
+}
+
+.filter-group select {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+}
+
+/* Layout de categorías y productos */
+.categories-products {
+    display: flex;
+    gap: 30px;
+}
+
+.categories-sidebar {
+    flex: 0 0 250px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    /* Mobile specific styles for categories sidebar */
+    @media (max-width: 992px) {
+        position: fixed;
+        left: -250px; /* Hidden by default */
+        top: 0;
+        bottom: 0;
+        width: 250px;
+        z-index: 1000;
+        transition: left 0.3s ease-in-out;
+        box-shadow: var(--shadow);
+        overflow-y: auto; /* Enable scrolling for long lists */
+        height: 100%; /* Take full height */
+    }
+    @media (max-width: 768px) {
+        left: -100%; /* Hide completely for smaller screens when not active */
+    }
+}
+
+.categories-sidebar.active {
+    left: 0;
+}
+
+.categories-sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.categories-list {
+    list-style: none;
+}
+
+.categories-list li {
+    margin-bottom: 10px;
+}
+
+.categories-list li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.categories-list li a:hover, .categories-list li.active a {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+}
+
+.categories-list li a i {
+    width: 20px;
+    text-align: center;
+}
+
+.products-main {
+    flex: 1;
+}
+
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    position: relative; /* Added for product-badge */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 44px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+.location i {
+    font-size: 12px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.fav-btn {
+    background: none;
+    border: 1px solid var(--medium-gray);
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.fav-btn:hover, .fav-btn.active {
+    color: var(--error-color);
+    border-color: var(--error-color);
+}
+
+.view-btn {
+    flex: 1;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.see-more {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.see-more:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.see-more i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .categories-products {
+        flex-direction: column;
+    }
+    
+    .categories-sidebar {
+        /* Already handled by fixed positioning above */
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Mobile filter specific styles */
+    .explore-filters {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        bottom: 0;
+        width: min(85%, 350px); /* Adjust width for mobile */
+        background-color: var(--card-bg);
+        z-index: 1000;
+        padding: 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto; /* Enable scrolling if filters are long */
+        border-radius: 0; /* Remove border radius for full height panel */
+        margin-bottom: 0;
+        height: 100vh; /* Take full viewport height */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .explore-filters.filters-active {
+        right: 0;
+    }
+
+    .explore-filters .search-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .explore-filters .search-box {
+        max-width: 100%;
+        margin-bottom: 15px; /* Add margin below search box in mobile filter panel */
+    }
+
+    .explore-filters .filter-grid {
+        grid-template-columns: 1fr;
+        flex: 1; /* Allow filter grid to take remaining space */
+        overflow-y: auto; /* Allow scrolling within the filter options */
+    }
+
+    .filter-actions.mobile-only {
+        display: flex; /* Always show buttons when filter panel is active on mobile */
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px; /* Spacing from filters */
+        padding-top: 15px;
+        border-top: 1px solid var(--medium-gray); /* Separator */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .explore-filters {
+        padding: 15px;
+    }
+}
+
+/* Filter Backdrop for mobile filters */
+.filter-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.filter-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Estilos para los filtros */
+/* These were mostly duplicated, merging them with the main explore-filters */
+/* .explore-filters { ... } */ /* Removed duplicate */
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-header h2 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* .search-box { ... } */ /* Removed duplicate */
+/* .search-box input { ... } */ /* Removed duplicate */
+/* .search-box button { ... } */ /* Removed duplicate */
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.filter-card {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-header i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.filter-header h3 {
+    font-size: 16px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.filter-select {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.apply-filters, .reset-filters {
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.apply-filters {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.apply-filters:hover {
+    background-color: var(--secondary-color);
+}
+
+.reset-filters {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--medium-gray);
+}
+
+.reset-filters:hover {
+    background-color: var(--light-gray);
+}
+
+/* Ocultar botones de aplicar en desktop - This is good */
+/* .filter-actions:not(.mobile-only) { display: none; } */
+
+
+/* Existing compact styles, ensuring they don't interfere with new mobile filter panel */
+.explore-filters.compact {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+
+.explore-filters.compact .filters-container {
+    gap: 12px;
+}
+
+.search-box.compact {
+    height: 40px;
+}
+
+.search-box.compact input {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.search-box.compact button {
+    padding: 0 15px;
+}
+
+.filter-options.compact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-group.compact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 6px 12px;
+    height: 40px;
+}
+
+.filter-group.compact i {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.filter-group.compact select {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 13px;
+    padding: 5px 0;
+    height: 100%;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.filter-group.compact select:focus {
+    outline: none;
+}
+
+/* Responsive para versión compacta */
+@media (max-width: 768px) {
+    .filter-options.compact {
+        flex-direction: column;
+    }
+    
+    .filter-group.compact {
+        width: 100%;
+    }
+}
+
+.small-btn {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    border-radius: 16px !important;
+    height: 50%;
+    margin-top: 20px;
+}
+
+.apply-filters.small-btn {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.reset-filters.small-btn {
+    background-color: transparent !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--medium-gray) !important;
+}
+
+.apply-filters.small-btn:hover {
+    background-color: var(--secondary-color) !important;
+    transform: scale(1.02);
+}
+
+.reset-filters.small-btn:hover {
+    background-color: var(--light-gray) !important;
+}
+
+/* Mobile action bar for category and filter toggles */
+.mobile-actions-bar {
+ /* Hidden on desktop */
+    justify-content: space-around;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 70px; /* Below header */
+    
+
+    @media (max-width: 992px) {
+        display: flex; /* Show on tablet/mobile */
+        margin: 20px auto; /* Center it */
+        max-width: 1400px; /* Match explore-content */
+        width: calc(100% - 40px);
+    }
+    @media (max-width: 768px) {
+        padding: 10px 15px;
+    }
+}
+
+.mobile-category-toggle-btn, .filter-toggle-btn {
+    flex: 1;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mobile-category-toggle-btn:hover, .filter-toggle-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.close-filter-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+    position: absolute; /* Position relative to .explore-filters */
+    top: 15px;
+    right: 15px;
+    display: none; /* Hidden by default, shown by JS */
+}
+
+@media (max-width: 768px) {
+    .close-filter-btn {
+        display: block; /* Always visible on mobile filter panel */
+    }
+}
+
+/* Sidebar Backdrop (for categories sidebar) */
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Below filter backdrop, above main content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.sidebar-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modificar el mobile-actions-bar para que sea fijo */
+.mobile-actions-bar {
+
+    position: fixed;
+    top: 70px; /* Ajusta según la altura de tu header */
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 10px;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Añadir padding al main para que el contenido no quede oculto detrás de la barra fija */
+.explore-content {
+    padding-top: 120px; /* Ajusta según la altura de tu header + la barra de acciones */
+}
+
+/* Ajustar el grid de productos para móviles */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas */
+        gap: 15px;
+    }
+    
+    /* Asegurarse de que las tarjetas no sean demasiado grandes */
+    .product-card {
+        max-width: 100%;
+    }
+    
+    /* Ajustar el padding del contenido principal para móviles */
+    .explore-content {
+        padding: 120px 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mantener 2 columnas incluso en pantallas muy pequeñas */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* Ajustar el tamaño de la imagen del producto */
+    .product-image {
+        height: 150px;
+    }
+}
+
+
+/* Eliminar los estilos fijos de la barra de acciones */
+.mobile-actions-bar {
+    /* Quitar position: fixed y propiedades relacionadas */
+    display: none; /* Mantener hidden en desktop */
+    justify-content: space-around;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    
+    margin-bottom: 20px;
+    box-shadow: var(--shadow); 
+    
+    /* Mantener solo sticky en tablet/mobile */
+    @media (max-width: 992px) {
+        display: flex;
+        margin: 20px auto;
+        max-width: 1400px;
+        width: calc(100%);
+    }
+    @media (max-width: 768px) {
+        padding: 10px 15px;
+    }
+}
+
+/* Eliminar el padding-top adicional del contenido */
+.explore-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px; /* Volver al padding original */
+}
+
+/* Ajustar el grid de productos para móviles (2 columnas) */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas */
+        gap: 15px;
+    }
+    
+    .product-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mantener 2 columnas incluso en pantallas muy pequeñas */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    /* Ajustar el tamaño de la imagen del producto */
+    .product-image {
+        height: 150px;
+    }
+}

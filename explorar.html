@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar - Ancla</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="explorar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i> <img class="logoancla" src="logoanclacompleto.png" alt=""></i>
+            </div>
+
+              <style>
+                .logoancla{
+                    margin-top: 10px;
+                    width: 120px;
+                }
+            </style>
+            
+          <nav class="main-nav">
+                <a href="paginaprincipal.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="explorar.html" class="nav-link active"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="misventas.html" class="nav-link"><i class="fas fa-tag"></i> Mis Ventas</a>
+                <a href="miscompras.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Mis Compras</a>
+                <a href="notificaciones.html" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a>
+                <a href="chats.html" class="nav-link"><i class="fas fa-comments"></i> Chats</a>
+            </nav>
+            
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="imagenprueba.png" alt="Usuario">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="miperfil.html"><i class="fas fa-user"></i> Mi Perfil</a>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="explore-content">
+        <div class="mobile-actions-bar">
+            <button class="mobile-category-toggle-btn">
+                <i class="fas fa-list"></i> Categorías
+            </button>
+            <button class="filter-toggle-btn">
+                <i class="fas fa-filter"></i> Mostrar Filtros
+            </button>
+        </div>
+
+        <section class="explore-filters">
+            <div class="filters-container">
+                <div class="search-header">
+                    <h2>Filtros</h2>
+                    <button class="close-filter-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar productos... (ej: iPhone)">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <div class="filter-grid">
+                    
+                    <div class="filter-card">
+                        <div class="filter-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Ubicación</h3>
+                        </div>
+                        <select class="filter-select">
+                            <option selected>Toda Venezuela</option>
+                            <option>Caracas</option>
+                            <option>Maracaibo</option>
+                            <option>Valencia</option>
+                            <option>Barquisimeto</option>
+                            <option>Maracay</option>
+                            <option>Ciudad Guayana</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-card">
+                        <div class="filter-header">
+                            <i class="fas fa-dollar-sign"></i>
+                            <h3>Precio</h3>
+                        </div>
+                        <select class="filter-select">
+                            <option selected>Cualquier precio</option>
+                            <option>Menos de $50</option>
+                            <option>$50 - $200</option>
+                            <option>$200 - $500</option>
+                            <option>$500 - $1,000</option>
+                            <option>Más de $1,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-card">
+                        <div class="filter-header">
+                            <i class="fas fa-sort-amount-down"></i>
+                            <h3>Ordenar por</h3>
+                        </div>
+                        <select class="filter-select">
+                            <option selected>Recientes primero</option>
+                            <option>Más antiguos primero</option>
+                            <option>Precio: menor a mayor</option>
+                            <option>Precio: mayor a menor</option>
+                            <option>Más cercanos primero</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-actions mobile-only">
+                        <button class="apply-filters small-btn">Aplicar Filtros</button>
+                        <button class="reset-filters ">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-products">
+            <div class="categories-sidebar">
+                <h3><i class="fas fa-list"></i> Todas las categorías</h3>
+                <ul class="categories-list">
+                    <li class="active"><a href="#tecnologia-section"><i class="fas fa-laptop"></i> Tecnología</a></li>
+                    <li><a href="#hogar-section"><i class="fas fa-home"></i> Hogar</a></li>
+                    <li><a href="#"><i class="fas fa-tshirt"></i> Moda</a></li>
+                    <li><a href="#"><i class="fas fa-blender"></i> Electrodomésticos</a></li>
+                    <li><a href="#"><i class="fas fa-football-ball"></i> Deportes</a></li>
+                    <li><a href="#"><i class="fas fa-baby"></i> Niños</a></li>
+                    <li><a href="#"><i class="fas fa-car"></i> Vehículos</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Libros</a></li>
+                    <li><a href="#"><i class="fas fa-paw"></i> Mascotas</a></li>
+                    <li><a href="#"><i class="fas fa-tools"></i> Herramientas</a></li>
+                </ul>
+            </div>
+            
+            <div class="products-main">
+                <div class="category-section" id="tecnologia-section">
+                    <h2 class="category-title"><i class="fas fa-laptop"></i> Tecnología</h2>
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-badge">Nuevo</div>
+                            <div class="product-image">
+                                <img src="https://appleguyza.co.za/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-25-at-9.47.00-AM.jpeg" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>iPhone 13 Pro Max 256GB</h3>
+                                <div class="price">$520</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Caracas
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://www.macworld.com/wp-content/uploads/2023/01/macbook-air-2018-hero-100779118-orig-6.jpeg?quality=50&strip=all" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>MacBook Air M1 2020 8GB/256GB</h3>
+                                <div class="price">$800</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Valencia
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-badge">Oferta</div>
+                            <div class="product-image">
+                                <img src="https://cdni.autocarindia.com/Utils/ImageResizerV2.ashx?n=https://cdni.autocarindia.com/Stuff/Uploads/ReviewImages/637825486901681363_samsung-galaxy-s22-ultra-review-1.JPG&w=883&h=662&q=70&c=1" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>Samsung Galaxy S22 Ultra 256GB</h3>
+                                <div class="price">$750</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Maracaibo
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://img.drz.lazcdn.com/g/kf/S77acb189845b490fa2c72535272fda441.jpg_720x720q80.jpg" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>Apple Watch Series 7 45mm</h3>
+                                <div class="price">$350</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Barquisimeto
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="see-more">Ver más en Tecnología <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-section" id="hogar-section">
+                    <h2 class="category-title"><i class="fas fa-home"></i> Hogar</h2>
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://m.media-amazon.com/images/I/71bUCM568ZL._AC_SL1500_.jpg" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>Sofá cama moderno color beige</h3>
+                                <div class="price">$450</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Valencia
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-badge">Destacado</div>
+                            <div class="product-image">
+                                <img src="https://mueblesmana.cl/wp-content/uploads/2023/01/c17.jpeg" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>Juego de comedor para 6 personas</h3>
+                                <div class="price">$600</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Caracas
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://prendeluz.com/app/images/products/502003-1.webp" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>Lámpara de pie moderna</h3>
+                                <div class="price">$80</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Maracay
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://http2.mlstatic.com/D_Q_NP_2X_651257-MCO84365301002_052025-T.webp" alt="Producto">
+                            </div>
+                            <div class="product-info">
+                                <h3>Cortinas blackout 2x2 metros</h3>
+                                <div class="price">$120</div>
+                                <div class="location">
+                                    <i class="fas fa-map-marker-alt"></i> Barquisimeto
+                                </div>
+                                <div class="product-actions">
+                                    <button class="fav-btn"><i class="far fa-heart"></i></button>
+                                    <button class="view-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="see-more">Ver más en Hogar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="filter-backdrop"></div>
+    <div class="sidebar-backdrop"></div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VenMarket</h3>
+                <p>El marketplace seguro de Venezuela donde puedes comprar y vender productos con total confianza.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="comovender.html">Cómo vender</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="terminosycondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contacto@venmarket.com</li>
+                    <li><i class="fas fa-phone"></i> +58 412-1234567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;  2025 Ancla.. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+   <div class="beta-floating-btn">
+        Ancla v0.9 Beta
+    </div>
+
+
+    <style>
+        /* Estilos para el botón flotante de versión Beta */
+.beta-floating-btn {
+    position: fixed;
+    bottom: 25px; /* Ajusta la distancia desde abajo */
+    right: 25px; /* Ajusta la distancia desde la derecha */
+    background-color: #FFD700; /* Color amarillo */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 12px 20px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para un toque más profesional */
+}
+
+.beta-floating-btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes responsive para el botón flotante */
+@media (max-width: 768px) {
+    .beta-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beta-floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+    </style>
+    <script src="paginaprincipal.js"></script>
+    <script src="explorar.js"></script>
+</body>
+</html>

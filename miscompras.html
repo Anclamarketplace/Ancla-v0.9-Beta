@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Compras - Ancla</title>
+    <link rel="stylesheet" href="paginaprincipal.css">
+    <link rel="stylesheet" href="miscompras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i> <img class="logoancla" src="logoanclacompleto.png" alt=""></i>
+            </div>
+
+            <style>
+                .logoancla{
+                    margin-top: 10px;
+                    width: 120px;
+                }
+            </style>
+            
+           <nav class="main-nav">
+                <a href="paginaprincipal.html" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                <a href="explorar.html" class="nav-link"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="misventas.html" class="nav-link"><i class="fas fa-tag"></i> Mis Ventas</a>
+                <a href="miscompras.html" class="nav-link active"><i class="fas fa-shopping-bag"></i> Mis Compras</a>
+                <a href="notificaciones.html" class="nav-link"><i class="fas fa-bell"></i> Notificaciones</a>
+                <a href="chats.html" class="nav-link"><i class="fas fa-comments"></i> Chats</a>
+            </nav>
+            
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="imagenprueba.png" alt="Usuario">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="miperfil.html"><i class="fas fa-user"></i> Mi Perfil</a>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="purchases-content">
+        <div class="purchases-header">
+            <h1><i class="fas fa-shopping-bag"></i> Mis Compras</h1>
+        </div>
+
+        <div class="purchases-tabs">
+            <button class="tab-btn active" data-tab="all">Todas</button>
+            <button class="tab-btn" data-tab="pending">Pendientes</button>
+            <button class="tab-btn" data-tab="completed">Completadas</button>
+            <button class="tab-btn" data-tab="cancelled">Canceladas</button>
+        </div>
+
+        <!-- Compras Pendientes -->
+        <section class="purchases-section active" id="pending-purchases">
+            <div class="section-header">
+                <h2><i class="fas fa-clock"></i> Compras Pendientes</h2>
+                <span class="badge">2 productos</span>
+            </div>
+            
+            <div class="purchases-grid">
+                <!-- Compra 1 -->
+                <div class="purchase-card pending">
+                    <div class="purchase-badge">En proceso</div>
+                    <div class="purchase-image">
+                        <img src="imagenprueba.png" alt="MacBook Pro">
+                    </div>
+                    <div class="purchase-info">
+                        <h3>MacBook Pro M1 2020 16GB/512GB</h3>
+                        <div class="price">$1,600</div>
+                        <div class="seller-info">
+                            <div class="seller-header">
+                                <i class="fas fa-store"></i>
+                                <span>Vendedor:</span>
+                                <strong>TecnoShop</strong>
+                            </div>
+                            <div class="purchase-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Comprado el: 10/06/2023</span>
+                                <span><i class="fas fa-truck"></i> Envío en proceso</span>
+                            </div>
+                            <div class="purchase-actions">
+                                <button class="action-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                                <button class="action-btn track-btn"><i class="fas fa-map-marker-alt"></i> Seguir envío</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compra 2 -->
+                <div class="purchase-card pending">
+                    <div class="purchase-badge">Esperando pago</div>
+                    <div class="purchase-image">
+                        <img src="imagenprueba.png" alt="Samsung TV">
+                    </div>
+                    <div class="purchase-info">
+                        <h3>Samsung TV QLED 55" 4K</h3>
+                        <div class="price">$1,200</div>
+                        <div class="seller-info">
+                            <div class="seller-header">
+                                <i class="fas fa-user"></i>
+                                <span>Vendedor:</span>
+                                <strong>Carlos Pérez</strong>
+                            </div>
+                            <div class="purchase-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Comprado el: 08/06/2023</span>
+                                <span><i class="fas fa-money-bill-wave"></i> Esperando confirmación de pago</span>
+                            </div>
+                            <div class="purchase-actions">
+                                <button class="action-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                                <button class="action-btn pay-btn"><i class="fas fa-credit-card"></i> Completar pago</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compras Completadas -->
+        <section class="purchases-section" id="completed-purchases">
+            <div class="section-header">
+                <h2><i class="fas fa-check-circle"></i> Compras Completadas</h2>
+                <span class="badge">3 productos</span>
+            </div>
+            
+            <div class="purchases-grid">
+                <!-- Compra 1 -->
+                <div class="purchase-card completed">
+                    <div class="purchase-badge">Entregado</div>
+                    <div class="purchase-image">
+                        <img src="imagenprueba.png" alt="iPhone 13">
+                    </div>
+                    <div class="purchase-info">
+                        <h3>iPhone 13 128GB</h3>
+                        <div class="price">$1,100</div>
+                        <div class="seller-info">
+                            <div class="seller-header">
+                                <i class="fas fa-store"></i>
+                                <span>Vendedor:</span>
+                                <strong>TechVenezuela</strong>
+                            </div>
+                            <div class="purchase-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Comprado el: 25/05/2023</span>
+                                <span><i class="fas fa-check"></i> Entregado el: 30/05/2023</span>
+                            </div>
+                            <div class="purchase-actions">
+                                <button class="action-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                                <button class="action-btn review-btn"><i class="fas fa-star"></i> Dejar reseña</button>
+                                <button class="action-btn view-seller-btn"><i class="fas fa-info-circle"></i> Ver vendedor</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compra 2 -->
+                <div class="purchase-card completed">
+                    <div class="purchase-badge">Calificado</div>
+                    <div class="purchase-image">
+                        <img src="imagenprueba.png" alt="Zapatos deportivos">
+                    </div>
+                    <div class="purchase-info">
+                        <h3>Zapatos deportivos Adidas Ultraboost</h3>
+                        <div class="price">$120</div>
+                        <div class="seller-info">
+                            <div class="seller-header">
+                                <i class="fas fa-user"></i>
+                                <span>Vendedor:</span>
+                                <strong>Ana Rodríguez</strong>
+                            </div>
+                            <div class="purchase-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Comprado el: 15/05/2023</span>
+                                <span><i class="fas fa-star" style="color: gold;"></i> Calificación: 5/5</span>
+                            </div>
+                            <div class="purchase-actions">
+                                <button class="action-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                                <button class="action-btn view-seller-btn"><i class="fas fa-info-circle"></i> Ver vendedor</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compras Canceladas -->
+        <section class="purchases-section" id="cancelled-purchases">
+            <div class="section-header">
+                <h2><i class="fas fa-times-circle"></i> Compras Canceladas</h2>
+                <span class="badge">1 producto</span>
+            </div>
+            
+            <div class="purchases-grid">
+                <!-- Compra 1 -->
+                <div class="purchase-card cancelled">
+                    <div class="purchase-badge">Cancelado</div>
+                    <div class="purchase-image">
+                        <img src="imagenprueba.png" alt="Sofá">
+                    </div>
+                    <div class="purchase-info">
+                        <h3>Sofá de cuero 3 plazas</h3>
+                        <div class="price">$600</div>
+                        <div class="seller-info">
+                            <div class="seller-header">
+                                <i class="fas fa-user"></i>
+                                <span>Vendedor:</span>
+                                <strong>Muebles López</strong>
+                            </div>
+                            <div class="purchase-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Comprado el: 02/05/2023</span>
+                                <span><i class="fas fa-ban"></i> Cancelado el: 05/05/2023</span>
+                            </div>
+                            <div class="purchase-actions">
+                                <button class="action-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                                <button class="action-btn reason-btn"><i class="fas fa-question-circle"></i> Ver motivo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de detalles del vendedor -->
+        <div class="modal-overlay" id="seller-modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h3><i class="fas fa-store"></i> Información del Vendedor</h3>
+                <div class="seller-details">
+                    <div class="seller-profile">
+                        <img src="imagenprueba.png" alt="Vendedor" class="seller-avatar">
+                        <div class="seller-name-rating">
+                            <h4 id="seller-name">TechVenezuela</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (128 reseñas)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Tipo:</span>
+                        <span class="detail-value" id="seller-type">Tienda verificada</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Miembro desde:</span>
+                        <span class="detail-value" id="seller-since">Enero 2021</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Ubicación:</span>
+                        <span class="detail-value" id="seller-location">Caracas, Venezuela</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Productos vendidos:</span>
+                        <span class="detail-value" id="seller-sales">245</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Tiempo de respuesta:</span>
+                        <span class="detail-value" id="seller-response">1-2 horas</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn contact-btn"><i class="fas fa-comment"></i> Contactar</button>
+                    <button class="modal-btn view-products-btn"><i class="fas fa-boxes"></i> Ver productos</button>
+                    <button class="modal-btn close-btn"><i class="fas fa-times"></i> Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de motivo de cancelación -->
+        <div class="modal-overlay" id="reason-modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h3><i class="fas fa-question-circle"></i> Motivo de cancelación</h3>
+                <div class="reason-content">
+                    <p><strong>Producto:</strong> Sofá de cuero 3 plazas</p>
+                    <p><strong>Vendedor:</strong> Muebles López</p>
+                    <p><strong>Fecha de cancelación:</strong> 05/05/2023</p>
+                    
+                    <div class="reason-box">
+                        <h4>Motivo:</h4>
+                        <p>El vendedor canceló la compra debido a que el producto ya no estaba disponible en inventario.</p>
+                    </div>
+                    
+                    <div class="refund-info">
+                        <h4>Información de reembolso:</h4>
+                        <p>El reembolso fue procesado el 06/05/2023 y se completó el 08/05/2023. El monto de $600 fue devuelto a tu método de pago original.</p>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn close-btn"><i class="fas fa-times"></i> Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VenMarket</h3>
+                <p>El marketplace seguro de Venezuela donde puedes comprar y vender productos con total confianza.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces útiles</h3>
+               <ul>
+                    <li><a href="comocomprar.html">Cómo comprar</a></li>
+                    <li><a href="comovender.html">Cómo vender</a></li>
+                    <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                    <li><a href="terminosycondiciones.html">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contacto@venmarket.com</li>
+                    <li><i class="fas fa-phone"></i> +58 412-1234567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Caracas, Venezuela</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;  2025 Ancla.. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+   <div class="beta-floating-btn">
+        Ancla v0.9 Beta
+    </div>
+
+
+    <style>
+        /* Estilos para el botón flotante de versión Beta */
+.beta-floating-btn {
+    position: fixed;
+    bottom: 25px; /* Ajusta la distancia desde abajo */
+    right: 25px; /* Ajusta la distancia desde la derecha */
+    background-color: #FFD700; /* Color amarillo */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 12px 20px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para un toque más profesional */
+}
+
+.beta-floating-btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes responsive para el botón flotante */
+@media (max-width: 768px) {
+    .beta-floating-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .beta-floating-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+    </style>
+    <script src="paginaprincipal.js"></script>
+    <script src="miscompras.js"></script>
+</body>
+</html>

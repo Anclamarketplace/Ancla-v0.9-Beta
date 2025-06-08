@@ -1,0 +1,781 @@
+/* Estilos específicos para la página de perfil */
+.profile-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-header {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column; /* Default to column for mobile-first approach */
+    align-items: center; /* Center items in column layout */
+    gap: 20px;
+}
+
+.profile-info-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center; /* Center text elements */
+    width: 100%; /* Take full width */
+}
+
+.user-avatar-large {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.user-avatar-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.edit-avatar-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.user-details-summary {
+    flex: 1;
+    text-align: center; /* Center align for mobile */
+}
+
+.user-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center for mobile */
+    gap: 8px;
+}
+
+.verified-icon {
+    color: #388E3C; /* Green checkmark */
+    font-size: 20px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center for mobile */
+    gap: 5px;
+    color: #FFC107; /* Gold stars */
+    margin-bottom: 10px;
+}
+
+.rating i {
+    font-size: 18px;
+}
+
+.rating span {
+    color: var(--dark-gray);
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.user-bio {
+    font-size: 15px;
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+    max-width: 600px; /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center for mobile */
+    gap: 15px;
+    font-size: 14px;
+    color: var(--medium-gray);
+    margin-bottom: 20px;
+}
+
+.profile-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-profile-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center; /* Center content in button */
+    width: 100%; /* Full width button on mobile */
+    max-width: 250px; /* Limit max width for smaller screens */
+}
+
+.contact-profile-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.profile-tabs {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    position: relative;
+    font-size: 15px; /* Default font size for tabs */
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    background-color: var(--light-gray);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.profile-section {
+    display: none; /* Hidden by default, shown by JS */
+    margin-bottom: 40px;
+}
+
+.profile-section.active {
+    display: block;
+}
+
+.profile-section .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Space between items if wrapped */
+}
+
+.profile-section .section-header h2 {
+    font-size: 22px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Common product grid styling (reused from explorar/misventas) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted minwidth for mobile */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    position: relative;
+    display: flex; /* Make cards flex for internal layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.product-card.sold {
+    opacity: 0.7; /* Slightly faded for sold items */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.product-badge[data-status="sold"] {
+    background-color: var(--secondary-color);
+}
+.product-badge[data-status="active"] {
+    background-color: var(--primary-color);
+}
+
+
+.product-image {
+    height: 150px; /* Reduced height for smaller cards */
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 15px;
+    flex-grow: 1; /* Allow info to take available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 40px; /* Ensure consistent height for titles */
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.location, .sale-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: var(--dark-gray);
+    margin-top: auto; /* Push to bottom of card */
+}
+
+.location i, .sale-date i {
+    font-size: 11px;
+}
+
+.see-more-link {
+    display: block;
+    text-align: right;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.see-more-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.see-more-link i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* Reseñas */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.review-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-color);
+}
+
+.reviewer-info h4 {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.rating-small {
+    display: flex;
+    gap: 3px;
+    color: #FFC107;
+    font-size: 14px;
+}
+
+.review-comment {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.review-date {
+    font-size: 12px;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.full-width-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px; /* Space from last review */
+}
+
+/* Actividad */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s;
+}
+
+.activity-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-info p {
+    font-size: 15px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.activity-info strong {
+    color: var(--primary-color);
+}
+
+.activity-date {
+    font-size: 12px;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* Responsive */
+@media (min-width: 769px) { /* Desktop styles for profile header */
+    .profile-header {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .profile-info-main {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .user-details-summary {
+        text-align: left;
+    }
+    
+    .user-name, .rating, .profile-meta {
+        justify-content: flex-start; /* Align to left on desktop */
+    }
+
+    .contact-profile-btn {
+        width: auto; /* Reset width for desktop */
+        max-width: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-tabs {
+        flex-wrap: wrap; /* Allow tabs to wrap */
+    }
+
+    .tab-btn {
+        flex: 1 0 calc(33.33% - 10px); /* 3 tabs per row */
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .profile-content {
+        padding: 15px;
+    }
+
+    .profile-header {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .user-avatar-large {
+        width: 100px;
+        height: 100px;
+    }
+
+    .edit-avatar-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .user-name {
+        font-size: 24px;
+        justify-content: center; /* Center name */
+    }
+
+    .verified-icon {
+        font-size: 18px;
+    }
+
+    .rating {
+        font-size: 16px;
+        justify-content: center; /* Center stars */
+    }
+
+    .user-bio {
+        font-size: 14px;
+        text-align: center; /* Center bio */
+    }
+
+    .profile-meta {
+        font-size: 13px;
+        flex-direction: column; /* Stack meta info */
+        align-items: center; /* Center stacked meta info */
+        gap: 8px;
+    }
+
+    .contact-profile-btn {
+        width: 100%; /* Full width button */
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .profile-tabs {
+        flex-wrap: wrap;
+        border-radius: 8px;
+    }
+
+    .tab-btn {
+        flex: 1 0 calc(50% - 5px); /* 2 tabs per row */
+        font-size: 13px;
+        padding: 10px 8px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Smaller minwidth for products on mobile */
+        gap: 15px;
+    }
+
+    .product-image {
+        height: 120px; /* Adjusted product image height */
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+        min-height: 36px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .location, .sale-date {
+        font-size: 12px;
+    }
+
+    .see-more-link {
+        text-align: center;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+
+    .reviewer-info {
+        gap: 10px;
+    }
+
+    .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reviewer-info h4 {
+        font-size: 16px;
+    }
+
+    .rating-small {
+        font-size: 12px;
+    }
+
+    .review-comment {
+        font-size: 14px;
+    }
+
+    .activity-item {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .activity-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .activity-info p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-content {
+        padding: 10px;
+    }
+
+    .profile-header {
+        padding: 15px;
+    }
+
+    .user-avatar-large {
+        width: 90px;
+        height: 90px;
+    }
+
+    .edit-avatar-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .user-name {
+        font-size: 20px;
+    }
+
+    .verified-icon {
+        font-size: 16px;
+    }
+
+    .rating {
+        font-size: 14px;
+    }
+
+    .user-bio {
+        font-size: 13px;
+    }
+
+    .profile-meta {
+        font-size: 12px;
+    }
+
+    .contact-profile-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .tab-btn {
+        flex: 1 0 100%; /* Full width tabs for very small screens */
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr; /* Single column for products */
+        gap: 10px;
+    }
+    
+    .product-image {
+        height: 100px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+        min-height: auto; /* Allow height to adjust */
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .location, .sale-date {
+        font-size: 11px;
+    }
+
+    .review-card {
+        padding: 10px;
+    }
+
+    .reviewer-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .reviewer-info h4 {
+        font-size: 14px;
+    }
+
+    .rating-small {
+        font-size: 11px;
+    }
+
+    .review-comment {
+        font-size: 12px;
+    }
+
+    .activity-item {
+        padding: 10px;
+    }
+
+    .activity-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .activity-info p {
+        font-size: 13px;
+    }
+
+    .activity-date {
+        font-size: 11px;
+    }
+
+    .see-more-link {
+        font-size: 13px;
+    }
+}
